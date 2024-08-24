@@ -137,6 +137,7 @@ const LeftSidebar = () => {
        const chatIndex = userChatsData.chatsData.findIndex(
          (c) => c.messageId === item.messageId
        );
+      // console.log(userChatsData.chatsData[chatIndex].messageSeen);
        userChatsData.chatsData[chatIndex].messageSeen = true;
        await updateDoc(userChatsRef, {
          chatsData: userChatsData.chatsData,

@@ -76,7 +76,7 @@ const ProfileUpdate = () => {
   return (
     <div className='profile'>
       <div className="profile-container">
-        <form onSubmit={profileUpdate}>
+        <form className='form-box' onSubmit={profileUpdate}>
           <h3>
             Profile Details
           </h3>
