@@ -161,6 +161,6 @@ textarea {
 
   .profile input,
   textarea {
-    min-width: 100%; /* Adjust input width for smaller screens */
+    min-width: 100%; 
   }
 }
