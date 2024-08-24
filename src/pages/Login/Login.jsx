@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Login.css';
 import assets from '../../assets/assets';
-import { signup } from '../../config/firebase';
+import { signup,login } from '../../config/firebase';
 
 
 
@@ -18,10 +18,12 @@ const Login = () => {
     e.preventDefault();
     if (currState === "Sign Up") {
       signup(userName, email, password);
+    } else {
+      login(email, password);
     }
-}
-
-  return (
+  }
+  
+   return (
     <div className="login">
       <img src={assets.logo_big} alt="" className="logo" />
       <form onSubmit={onSubmitHandler} className="login-form">
@@ -68,7 +70,7 @@ const Login = () => {
           ) : (
             <p className="login-toggle">
               Create an account
-              <span onClick={() => setCurrState("Login")}> Click here</span>
+              <span onClick={() => setCurrState("Sign Up")}> Click here</span>
             </p>
           )}
         </div>
@@ -76,5 +78,9 @@ const Login = () => {
     </div>
   );
 }
+
+ 
+
+
 
 export default Login
