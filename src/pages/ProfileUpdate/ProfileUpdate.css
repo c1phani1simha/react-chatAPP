@@ -86,12 +86,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 400px; /* Adjusted for smaller screens */
+  min-width: 400px;
+  max-width: 800px; /* Adjusted for smaller screens */
   border-radius: 10px;
+  overflow-x: hidden;
 }
 
 .profile-pic {
   max-width: 160px;
+  flex-grow: 1;
   aspect-ratio: 1/1;
   margin: 20px auto;
   border-radius: 50%;
@@ -130,7 +133,7 @@
 .profile input,
 textarea {
   padding: 10px;
-  min-width: 300px;
+  min-width: 200px;
   border: 1px solid #c9c9c9;
   outline-color: #077eff;
 }
@@ -151,16 +154,23 @@ textarea {
 
   .form-box {
     max-width: fit-content;
+       overflow-x: hidden;
     width: 100%;
   }
 
   .profile form {
+    overflow-x: hidden;
     flex-direction: row;
     flex-wrap: wrap; /* Allow elements to wrap */
+  }
+  .profile-container{
+    min-width: 200px;
+    max-width: 300px;
   }
 
   .profile input,
   textarea {
     min-width: 100%; 
+       overflow-x: hidden;
   }
 }
